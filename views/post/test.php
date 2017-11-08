@@ -11,5 +11,5 @@ use yii\helpers\Html;
 <?=$form->field($model,'email')->label('Email')->input('email')?>
 <?=$form->field($model,'text')->label('Текст сообщения')->textarea(['rows'=>5])?>
 
-<?=Html::submitButton('Отправить',['class'=>'btn btn-success'])?>
+<?=Html::submitButton('Отправить',['class'=>'btn btn-success']) ?>
 <? ActiveForm::end();?>
