@@ -48,9 +48,44 @@ class PostController extends  AppController
     }
     public function actionShow(){
 
-        $cats = Category::find()->all();
+        //$cats = Category::find()->asArray()->where(['like','title','pp'])->all();
+        //$cats = Category::find()->asArray()->where(['<=','id',695])->all();
+        $cats = Category::find()->asArray()->where(['<=','id',695])->all();
 
 
         return $this->render('show',compact('cats'));
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

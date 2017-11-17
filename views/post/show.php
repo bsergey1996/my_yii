@@ -2,7 +2,20 @@
 
 
 
-<? debug($cats); ?>
+<?
+foreach ($cats as $cat){
+    if(isset($cat->title)) {
+        echo $cat->alias . " ";
+        echo $cat->title . "<br/>";
+    }
+    if(isset($cat['title'])){
+        echo $cat['alias']." ";
+        echo $cat['title']."<br/>";
+    }
+}
+
+debug($cats);
+?>
 
 
 
