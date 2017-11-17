@@ -28,7 +28,7 @@ class PostController extends  AppController
           $this->debug($model);
           die;
           if($model->validate()){
-
+                echo 'Yeah';
           }
           else{
 /////////////////////////////////////////////////////
