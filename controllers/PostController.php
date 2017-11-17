@@ -25,13 +25,13 @@ class PostController extends  AppController
       $model = new TestForm();
 
       if( $model->load(Yii::$app->request->post())  ){//&& $model->validate() - проверка , валидации форм
-          $this->debug($model);
-          die;
           if($model->validate()){
-                echo 'Yeah';
+              Yii::$app->session->setFlash('success','Данные приняты');
+              //return $this->refresh();
           }
           else{
-/////////////////////////////////////////////////////
+              Yii::$app->session->setFlash('error','Ошибка');
+
           }
       }
 
