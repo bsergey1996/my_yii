@@ -24,6 +24,17 @@ class PostController extends  AppController
 
       $model = new TestForm();
 
+      if( $model->load(Yii::$app->request->post())  ){//&& $model->validate() - проверка , валидации форм
+          $this->debug($model);
+          die;
+          if($model->validate()){
+
+          }
+          else{
+
+          }
+      }
+
 
 
         if(Yii::$app->request->isAjax){
