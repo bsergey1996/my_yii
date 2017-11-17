@@ -1,4 +1,24 @@
 <h1>action Show </h1>
+
+
+
+<? debug($cats); ?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <button class="btn btn-success" id="btn">Click me...</button>
 <?
 //$this->registerJsFile('@web/js/scripts.js',['depends'=> 'yii\web\YiiAsset']);

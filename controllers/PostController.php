@@ -8,6 +8,7 @@
 
 namespace app\controllers;
 
+use app\models\Category;
 use Yii;
 use app\models\TestForm;
 
@@ -27,7 +28,6 @@ class PostController extends  AppController
       if( $model->load(Yii::$app->request->post())  ){//&& $model->validate() - проверка , валидации форм
           if($model->validate()){
               Yii::$app->session->setFlash('success','Данные приняты');
-              //return $this->refresh();
           }
           else{
               Yii::$app->session->setFlash('error','Ошибка');
@@ -47,7 +47,10 @@ class PostController extends  AppController
         return $this->render('test',compact('model'));
     }
     public function actionShow(){
-           //$this->layout = 'basic';
-        return $this->render('show');
+
+        $cats = Category::find()->all();
+
+
+        return $this->render('show',compact('cats'));
     }
 }
